@@ -35,3 +35,36 @@ status:
   loadBalancer:
     ingress:
     - ip: 10.128.0.36
+    
+    
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  creationTimestamp: 2019-01-16T12:42:17Z
+  generation: 1
+  labels:
+    app: dev-centraldirectory
+    chart: centraldirectory-3.4.2
+    heritage: Tiller
+    release: dev
+  name: dev-centraldirectory
+  namespace: mojaloop
+  resourceVersion: "24654"
+  selfLink: /apis/extensions/v1beta1/namespaces/mojaloop/ingresses/dev-centraldirectory
+  uid: 28a30e74-198c-11e9-afa0-42010a8001e4
+spec:
+  rules:
+  - host: central-directory.zablue.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centraldirectory
+          servicePort: 3000
+        path: /
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.128.0.36
+    
