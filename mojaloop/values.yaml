@@ -155,8 +155,8 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger.local
-          admin: central-ledger.local
+          api: central-ledger.zablue.demo.openafrica.network
+          admin: central-ledger.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -290,7 +290,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-prepare.local
+          api: central-ledger-transfer-prepare.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -423,7 +423,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-admin-transfer.local
+          api: central-ledger-admin-transfer.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -556,7 +556,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-position.local
+          api: central-ledger-transfer-position.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -689,7 +689,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-get.local
+          api: central-ledger-transfer-get.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -822,7 +822,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-transfer-fulfil.local
+          api: central-ledger-transfer-fulfil.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -955,7 +955,7 @@ central:
           admin: /admin
         # Used to create an Ingress record.
         hosts:
-          api: central-ledger-timeout.local
+          api: central-ledger-timeout.zablue.demo.openafrica.network
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
           # kubernetes.io/ingress.class: nginx
@@ -1021,7 +1021,7 @@ central:
         enabled: false
         # Used to create an Ingress record.
         hosts:
-          api: forensic-logging-sidecar.local
+          api: forensic-logging-sidecar.zablue.demo.openafrica.network
 
         externalPath: /
 
@@ -1095,7 +1095,7 @@ central:
           enabled: true
           # Used to create an Ingress record.
           hosts:
-            - central-kms.local
+            - central-kms.zablue.demo.openafrica.network
           externalPath: /
 
           annotations:
@@ -1712,7 +1712,7 @@ central:
       externalPath: /
       # Used to create an Ingress record.
       hosts:
-        api: central-directory.local
+        api: central-directory.zablue.demo.openafrica.network
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/'
         # kubernetes.io/ingress.class: nginx
@@ -1790,7 +1790,7 @@ central:
         externalPath: /
         # Used to create an Ingress record.
         hosts:
-          api: central-end-user-registry.local
+          api: central-end-user-registry.zablue.demo.openafrica.network
         annotations:
           # kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
@@ -1891,7 +1891,7 @@ central:
         enabled: false
         # Used to create an Ingress record.
         hosts:
-          api: mock-pathfinder.local
+          api: mock-pathfinder.zablue.demo.openafrica.network
         annotations:
           # kubernetes.io/ingress.class: nginx
           # kubernetes.io/tls-acme: "true"
@@ -2009,7 +2009,7 @@ central:
       externalPath: /
       # Used to create an Ingress record.
       hosts:
-        api: central-settlement.local
+        api: central-settlement.zablue.demo.openafrica.network
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/'
         # kubernetes.io/ingress.class: nginx
@@ -2098,7 +2098,7 @@ central:
       enabled: true
       # Used to create an Ingress record.
       hosts:
-        api: central-event-processor.local
+        api: central-event-processor.zablue.demo.openafrica.network
       
       externalPath: /
       
@@ -2486,7 +2486,7 @@ interop-switch:
       externalPath: /interop/switch/v1
       # Used to create an Ingress record.
       hosts:
-        api: interop-switch.local
+        api: interop-switch.zablue.demo.openafrica.network
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: '/switch/v1'
         # kubernetes.io/ingress.class: nginx
@@ -2545,7 +2545,7 @@ ml-api-adapter:
         externalPath: /
         # Used to create an Ingress record.
         hosts:
-          api: ml-api-adapter.local
+          api: ml-api-adapter.zablue.demo.openafrica.network
 
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
@@ -2608,7 +2608,7 @@ ml-api-adapter:
         externalPath: /
         # Used to create an Ingress record.
         hosts:
-          api: ml-api-adapter-notification.local
+          api: ml-api-adapter-notification.zablue.demo.openafrica.network
 
         annotations:
           nginx.ingress.kubernetes.io/rewrite-target: '/'
@@ -2709,7 +2709,7 @@ emailnotifier:
     enabled: true
     # Used to create an Ingress record.
     hosts:
-      api: email-notifier.local
+      api: email-notifier.zablue.demo.openafrica.network
     
     externalPath: /
     
