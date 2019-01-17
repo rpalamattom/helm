@@ -301,8 +301,8 @@ central:
           # - secretName: chart-example-tls
           #   hosts:
           #     - chart-example.local
-      resources: 
-      - '*'
+      resources:
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -435,8 +435,8 @@ central:
           # - secretName: chart-example-tls
           #   hosts:
           #     - chart-example.local
-      resources: 
-        -'*'
+      resources:
+       -'*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -570,7 +570,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-        - '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -704,7 +704,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-        - '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -838,7 +838,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-        - '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -972,7 +972,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -1041,7 +1041,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -1115,8 +1115,8 @@ central:
             #   hosts:
             #     - chart-example.local
 
-        resources: 
-	  - '*'
+        resources:
+         - '*'
           # We usually recommend not to specify default resources and to leave this as a conscious
           # choice for the user. This also increases chances charts run on environments with little
           # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -1362,7 +1362,7 @@ central:
       ## Configure resource requests and limits
       ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
       resources: 
-	- '*'
+       - '*'
         # limits:
         #   cpu: 200m
         #   memory: 1536Mi
@@ -1576,7 +1576,7 @@ central:
           port: 5556
 
           resources: 
-	- '*'
+           - '*'
             # limits:
             #   cpu: 200m
             #   memory: 1Gi
@@ -1602,7 +1602,7 @@ central:
 
           ## Resource limits
           resources: 
-	- '*'
+           - '*'
       #      limits:
       #        cpu: 200m
       #        memory: 1Gi
@@ -1735,7 +1735,7 @@ central:
         #   hosts:
         #     - chart-example.local
     resources: 
-	- '*'
+     - '*'
       # We usually recommend not to specify default resources and to leave this as a conscious
       # choice for the user. This also increases chances charts run on environments with little
       # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -1813,7 +1813,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -1915,7 +1915,7 @@ central:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2035,7 +2035,7 @@ central:
         #   hosts:
         #     - chart-example.local
     resources: 
-	- '*'
+     - '*'
       # We usually recommend not to specify default resources and to leave this as a conscious
       # choice for the user. This also increases chances charts run on environments with little
       # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2129,7 +2129,7 @@ central:
         #     - chart-example.local
 
     resources: 
-	- '*'
+     - '*'
       # We usually recommend not to specify default resources and to leave this as a conscious
       # choice for the user. This also increases chances charts run on environments with little
       # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2283,7 +2283,7 @@ central:
       ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
       ##
       resources: 
-	- '*'
+       - '*'
       # limits:
       #   cpu: 500m
       #   memory: 512Mi
@@ -2515,7 +2515,7 @@ interop-switch:
         #   hosts:
         #     - chart-example.local
     resources: 
-	- '*'
+     - '*'
       # We usually recommend not to specify default resources and to leave this as a conscious
       # choice for the user. This also increases chances charts run on environments with little
       # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2576,7 +2576,7 @@ ml-api-adapter:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2640,7 +2640,7 @@ ml-api-adapter:
           #   hosts:
           #     - chart-example.local
       resources: 
-	- '*'
+       - '*'
         # We usually recommend not to specify default resources and to leave this as a conscious
         # choice for the user. This also increases chances charts run on environments with little
         # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -2745,7 +2745,7 @@ emailnotifier:
       #     - chart-example.local
 
   resources: 
-    - '*'
+   - '*'
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
     # resources, such as Minikube. If you do want to specify resources, uncomment the following
