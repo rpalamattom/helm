@@ -24,7 +24,7 @@ spec:
           serviceName: dev-centralledger-service
           servicePort: 3000
         path: /
-  - host: central-ledger.local
+  - host: central-ledger.zablue.demo.openafrica.network
     http:
       paths:
       - backend:
