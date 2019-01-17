@@ -1,5 +1,7 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
+apiVersion: v1
+kind: Service
+#apiVersion: extensions/v1beta1
+#kind: Ingress
 # Default values for central.
 # This is a YAML-formatted file.
 # Declare global configurations
