@@ -1,98 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: dev-centralledger-handler-admin-transfer
+  name: dev-ml-api-adapter-service
+  namespace: mojaloop
   annotations:
     kubernetes.io/ingress.global-static-ip-name: helloweb-ip
 spec:
   rules:
-  - host: central-ledger-admin-transfer.red2.demo.openafrica.network
+  - host: dev-ml-api-adapter-service.red2.demo.openafrica.network
     http:
       paths:
       - backend:
-          serviceName: dev-centralledger-handler-admin-transfer
-          servicePort: 3000
-        path: /
-
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: dev-centralledger-handler-timeout
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
-spec:
-  rules:
-  - host: central-ledger-timeout.red2.demo.openafrica.network
-    http:
-      paths:
-      - backend:
-          serviceName: dev-centralledger-handler-timeout
-          servicePort: 3000
-        path: /
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: dev-centralkms
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
-spec:
-  rules:
-  - host: dev-centralkms.red2.demo.openafrica.network
-    http:
-      paths:
-      - backend:
-          serviceName: dev-centralkms
-          servicePort: 3000
-        path: /
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: dev-centraldirectory	
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
-spec:
-  rules:
-  - host: dev-centraldirectory.red2.demo.openafrica.network
-    http:
-      paths:
-      - backend:
-          serviceName: dev-centraldirectory
-          servicePort: 3000
-        path: /
-
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: dev-centraleventprocessor
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
-spec:
-  rules:
-  - host: dev-centraleventprocessor.red2.demo.openafrica.network
-    http:
-      paths:
-      - backend:
-          serviceName: dev-centraleventprocessor
-          servicePort: 3000
-        path: /
-
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: dev-centralledger-handler-transfer-fulfil
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
-spec:
-  rules:
-  - host: dev-centralledger-handler-transfer-fulfil.red2.demo.openafrica.network
-    http:
-      paths:
-      - backend:
-          serviceName: dev-centralledger-handler-transfer-fulfil
+          serviceName: dev-ml-api-adapter-service
           servicePort: 3000
         path: /
