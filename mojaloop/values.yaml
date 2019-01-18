@@ -6,7 +6,7 @@ centraldirectory:
   name: dev-centraldirectory
  spec:
   rules:
-   - host: central-directory.zablue.demo.openafrica.network
+   - host: central-directory.zared.demo.openafrica.network
 
 centralkms:
  metadata:
