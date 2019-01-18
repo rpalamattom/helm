@@ -1,3 +1,4 @@
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -12,5 +13,40 @@ spec:
       paths:
       - backend:
           serviceName: dev-ml-api-adapter-service
+          servicePort: 3000
+        path: /
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-ml-api-adapter-handler-notification
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
+spec:
+  rules:
+  - host: dev-ml-api-adapter-handler-notification.red2.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-ml-api-adapter-handler-notification
+          servicePort: 3000
+        path: /
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-interop-switch
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
+spec:
+  rules:
+  - host: dev-interop-switch.red2.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-interop-switch
           servicePort: 3000
         path: /
