@@ -19,4 +19,4 @@ centralkms:
 centralledger-handler-admin-transfer:
     spec:
      rules:
-      - host: central-ledger-admin-transfer.zared.demo.openafrica.network
+      - host: central-ledger-admin-transfer.zablue.demo.openafrica.network
