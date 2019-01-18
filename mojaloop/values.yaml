@@ -3,21 +3,21 @@ kind: Ingress
 
 centraldirectory:
  metadata:
-  name: dev-centraldirectory
+  name: mojaloop/dev-centraldirectory
  spec:
   rules:
    - host: central-directory.zared.demo.openafrica.network
 
 centralkms:
  metadata:
-  name: dev-centralkms
+  name: mojaloop/dev-centralkms
  spec:
   rules:
    - host: central-kms.zared.demo.openafrica.network
 
 centralledger-handler-admin-transfer:
  metadata:
-  name:dev-centralledger-handler-admin-transfer
+  name:mojaloop/dev-centralledger-handler-admin-transfer
  spec:
   rules:
    - host: central-ledger-admin-transfer.zared.demo.openafrica.network
