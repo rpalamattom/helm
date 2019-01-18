@@ -1,16 +1,23 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
+
 centraldirectory:
-   spec:
-    rules:
-    - host: central-directory.zared.demo.openafrica.network
+ metadata:
+  name: dev-centraldirectory
+ spec:
+  rules:
+   - host: central-directory.zared.demo.openafrica.network
 
 centralkms:
-   spec:
-    rules:
-    - host: central-kms.zared.demo.openafrica.network
+ metadata:
+  name: dev-centralkms
+ spec:
+  rules:
+   - host: central-kms.zared.demo.openafrica.network
 
 centralledger-handler-admin-transfer:
-    spec:
-     rules:
-      - host: central-ledger-admin-transfer.zablue.demo.openafrica.network
+ metadata:
+  name:dev-centralledger-handler-admin-transfer
+ spec:
+  rules:
+   - host: central-ledger-admin-transfer.zared.demo.openafrica.network
