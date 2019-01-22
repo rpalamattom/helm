@@ -12,6 +12,7 @@ spec:
       paths:
       - backend:
           serviceName: dev-centraldirectory
+          servicePort: 3000
         path: /
 
 ---
@@ -36,6 +37,7 @@ spec:
       paths:
       - backend:
           serviceName: dev-centraleventprocessor
+          servicePort: 3000
         path: /
 ---
 apiVersion: v1
