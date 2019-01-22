@@ -4,10 +4,10 @@ metadata:
   name: dev-centraldirectory
   namespace: mojaloop
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
 spec:
   rules:
-  - host: dev-centraldirectory.nr.demo.openafrica.network
+  - host: dev-centraldirectory.red.demo.openafrica.network
     http:
       paths:
       - backend:
@@ -24,7 +24,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
+  - port: 3000
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -32,17 +32,17 @@ metadata:
   name: dev-centraleventprocessor
   namespace: mojaloop
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
 spec:
   rules:
-  - host: dev-centraleventprocessor.nr.demo.openafrica.network
+  - host: dev-centraleventprocessor.red.demo.openafrica.network
     http:
       paths:
       - backend:
           serviceName: dev-centraleventprocessor
           servicePort: 3000
         path: /
----
+--- 
 apiVersion: v1
 kind: Service
 metadata:
@@ -59,10 +59,10 @@ metadata:
   name: dev-centralkms
   namespace: mojaloop
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
 spec:
   rules:
-  - host: dev-centralkms.nr.demo.openafrica.network
+  - host: dev-centralkms.red.demo.openafrica.network
     http:
       paths:
       - backend:
@@ -86,10 +86,10 @@ metadata:
   name: dev-centralledger-handler-admin-transfer
   namespace: mojaloop
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
 spec:
   rules:
-  - host: dev-centralledger-handler-admin-transfer.nr.demo.openafrica.network
+  - host: dev-centralledger-handler-admin-transfer.red.demo.openafrica.network
     http:
       paths:
       - backend:
@@ -110,13 +110,121 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  name: dev-centralledger-handler-timeout
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-timeout.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-timeout
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-timeout
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-handler-transfer-fulfil
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-transfer-fulfil.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-transfer-fulfil
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-transfer-fulfil
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-handler-transfer-get
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-transfer-get.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-transfer-get
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-transfer-get
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-handler-transfer-position
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-transfer-position.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-transfer-position
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-transfer-position
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
   name: dev-centralledger-handler-transfer-prepare
   namespace: mojaloop
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
 spec:
   rules:
-  - host: dev-centralledger-handler-transfer-prepare.nr.demo.openafrica.network
+  - host: dev-centralledger-handler-transfer-prepare.red.demo.openafrica.network
     http:
       paths:
       - backend:
@@ -128,6 +236,148 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centralledger-handler-transfer-prepare
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-service
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-service.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-service
+          servicePort: 3000
+        path: /
+  - host: dev-centralledger-service.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-service
+          servicePort: 3001
+        path: /admin
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-service
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3080
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralsettlement
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralsettlement.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralsettlement
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralsettlement
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-emailnotifier
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-emailnotifier.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-emailnotifier
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-emailnotifier
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-interop-switch
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-interop-switch.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-interop-switch
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-interop-switch
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-ml-api-adapter-handler-notification
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: red.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-ml-api-adapter-handler-notification.red.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-ml-api-adapter-handler-notification
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-ml-api-adapter-handler-notification
   namespace: mojaloop
 spec:
   type: NodePort
