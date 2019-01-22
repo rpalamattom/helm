@@ -20,6 +20,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centraldirectory
+  namespace: mojaloop
 spec:
   ports:
     port: 3000
@@ -46,6 +47,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centraleventprocessor
+  namespace: mojaloop
 spec:
   ports: 
     port: 3000
