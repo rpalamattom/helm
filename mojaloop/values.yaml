@@ -20,6 +20,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centraldirectory
+  namespace: mojaloop
 spec:
   type: NodePort
   ports:
@@ -46,6 +47,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centraleventprocessor
+  namespace: mojaloop
 spec:
   type: NodePort
   ports:
@@ -72,8 +74,63 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dev-centralkms
+  namespace: mojaloop
 spec:
   type: NodePort
   ports:
   - port: 8080
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-handler-admin-transfer
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-admin-transfer.nr.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-admin-transfer
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-admin-transfer
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dev-centralledger-handler-transfer-prepare
+  namespace: mojaloop
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: nr.demo.openafrica.network
+spec:
+  rules:
+  - host: dev-centralledger-handler-transfer-prepare.nr.demo.openafrica.network
+    http:
+      paths:
+      - backend:
+          serviceName: dev-centralledger-handler-transfer-prepare
+          servicePort: 3000
+        path: /
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-centralledger-handler-transfer-prepare
+  namespace: mojaloop
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
 ---
