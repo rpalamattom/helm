@@ -22,7 +22,7 @@ metadata:
   name: dev-centraldirectory
 spec:
   ports:
-   port: 3000
+    port: 3000
   type: NodePort
 ---
 apiVersion: extensions/v1beta1
@@ -48,6 +48,6 @@ metadata:
   name: dev-centraleventprocessor
 spec:
   ports: 
-   port: 3000
+    port: 3000
   type: NodePort
 ---
